@@ -43,10 +43,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         SCNTransaction.begin()
         SCNTransaction.animationDuration = 0.5
         sceneView.scene.rootNode.childNodes[0].transform = SCNMatrix4Mult(sceneView.scene.rootNode.childNodes[0].transform, SCNMatrix4MakeRotation(Float(Double.pi) / 4, 1, 0, 0))
-      //  SCNMatrix4MakeRotation(Float(Double.pi) / 2, 1, 0, 0))
         sceneView.scene.rootNode.childNodes[0].transform = SCNMatrix4Mult(sceneView.scene.rootNode.childNodes[0].transform, SCNMatrix4MakeTranslation(0, 0, -4))
-        
-       // SCNMatrix4MakeTranslation(0, 0, -2))
         SCNTransaction.commit()
     }
     
